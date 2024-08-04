@@ -1,0 +1,98 @@
+\documentclass{prometheus_cv}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.2in, 10in}, top=2cm]{geometry}		% width=5.3in, height=10in, top margin=2cm on each page
+\usepackage{xcolor}																				  % define some colors
+\definecolor{highlight}{HTML}{283559}
+\definecolor{highlight2}{HTML}{1A2640}
+\definecolor{link}{HTML}{5C6273}
+
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=0pt}
+\usepackage{lipsum}
+\usepackage{siunitx}							% package to properly set units
+\usepackage{fontawesome5}						% package for icons (see list of available icons here: http://mirrors.ibiblio.org/CTAN/fonts/fontawesome5/doc/fontawesome5.pdf)
+\usepackage[super]{nth}							% when you write \nth{2} you get a nice superscript
+\usepackage[								% coloring of links
+	colorlinks = true,
+	linkcolor = highlight,
+	urlcolor = highlight,
+	citecolor= highlight
+]{hyperref}
+\usepackage{ragged2e}
+\usepackage{fontspec}							% package to change fonts				
+\setmainfont[
+	BoldFont=Cormorant Garamond Bold,
+	ItalicFont=Cormorant Garamond Italic,
+	BoldItalicFont=Cormorant Garamond Bold Italic
+]{Cormorant Garamond Regular}						% Set the main font to Comorant Garamond (https://github.com/CatharsisFonts/Cormorant)
+\newfontfamily\GaramondLight{Cormorant Garamond Light}
+\newcommand\textlf[1]{{\GaramondLight#1}}
+
+\newcommand{\highlight}[1]{\textcolor{highlight}{\textbf{#1}}}		% highlight text as bold and with the highlight color defined above
+\newcommand{\ec}{\textsuperscript{\textdagger}}								% Equal contribution dagger
+
+
+% define the header and (not) footer %
+\usepackage{fancyhdr}																		  
+\fancyhf{}
+\rhead{Curriculum Vit\ae}
+\lhead{Bishmay Barik}
+\rfoot{Page \thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\begin{document}
+\thispagestyle{empty}					% Turn off header and footer for the first page
+\pagestyle{fancy}			 		% For the rest of the pages switch to the fancy page style defined just above the document begin
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% TITLE %%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace*{-1cm}
+\centering 
+\input{title.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% EDUCATION %%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Education}
+\input{education.tex}
+\vspace{-0.8em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% RESEARCH EXPERIENCE %%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Research Experience}
+\input{research_experience.tex}
+\vspace{-0.8em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% DISSERTATION AND RESEARCH PROJECTS %%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Dissertation and Research Projects}
+\input{research_projects.tex}
+\vspace{-0.8em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% TEACHING %%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Teaching}
+\input{teaching.tex}
+\vspace{-0.8em}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% COURSE CERTIFICATIONS %%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Course Certifications}
+\input{course_certifications.tex}
+\vspace{-0.8em}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% SOFTWARE %%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Software}
+\input{software.tex}
+\vspace{-0.8em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% LANGUAGES %%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Languages}
+\input{languages.tex}
+
+\end{document}
