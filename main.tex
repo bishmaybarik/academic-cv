@@ -12,7 +12,7 @@
 \usepackage{siunitx}							% package to properly set units
 \usepackage{fontawesome5}						% package for icons (see list of available icons here: http://mirrors.ibiblio.org/CTAN/fonts/fontawesome5/doc/fontawesome5.pdf)
 \usepackage[super]{nth}							% when you write \nth{2} you get a nice superscript
-\usepackage[								% coloring of links
+\usepackage[
 	colorlinks = true,
 	linkcolor = highlight,
 	urlcolor = highlight,
@@ -21,19 +21,18 @@
 \usepackage{ragged2e}
 \usepackage{fontspec}							% package to change fonts				
 \setmainfont[
-	BoldFont=Cormorant Garamond Bold,
-	ItalicFont=Cormorant Garamond Italic,
-	BoldItalicFont=Cormorant Garamond Bold Italic
-]{Cormorant Garamond Regular}						% Set the main font to Comorant Garamond (https://github.com/CatharsisFonts/Cormorant)
-\newfontfamily\GaramondLight{Cormorant Garamond Light}
-\newcommand\textlf[1]{{\GaramondLight#1}}
+    BoldFont=Times New Roman Bold,
+    ItalicFont=Times New Roman Italic,
+    BoldItalicFont=Times New Roman Bold Italic
+]{Times New Roman}
+\newfontfamily\TimesNewRomanLight{Times New Roman}
 
 \newcommand{\highlight}[1]{\textcolor{highlight}{\textbf{#1}}}		% highlight text as bold and with the highlight color defined above
 \newcommand{\ec}{\textsuperscript{\textdagger}}								% Equal contribution dagger
 
-
 % define the header and (not) footer %
-\usepackage{fancyhdr}																		  
+\usepackage{fancyhdr}
+\usepackage{multicol}
 \fancyhf{}
 \rhead{Curriculum Vit\ae}
 \lhead{Bishmay Barik}
@@ -92,13 +91,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%% LANGUAGES %%%%%%%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Languages}
-\input{languages.tex}
+% \section{Languages}
+% \input{languages.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%% REFERENCES %%%%%%%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{References}
 Available on request.
-
 \end{document}
